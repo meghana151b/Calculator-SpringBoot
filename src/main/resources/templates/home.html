@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<style>
+    body {
+         font-family: Arial,sans-serif;
+         text-align: center;
+         margin-top: 50px;
+    }
+    .calculator {
+         display: inline-block;
+         text-align:left;
+         padding:20px;
+         border:2px solid #ccc;
+         border-radius:10px;
+         width: 300px;
+         background-color: #f9f9f9;
+    }
+</style>
+</head>
+<body>
+   <h1>Simple Calculator</h1>
+   <div class="calculator">
+   <form action="/calculate" method="POST">
+   <label for="num1">Enter number 1:</label>
+   <input type="number" id="num1" name="num1" required>
+   
+   <label for="num2">Enter number 2:</label>
+   <input type="number" id="num2" name="num2" required>
+   
+   <div>
+   <button type="submit" name="operation" value="add">Add</button>
+   <button type="submit" name="operation" value="sub">Subtract</button>
+   <button type="submit" name="operation" value="mul">Multiply</button>
+   <button type="submit" name="operation" value="div">Divide</button>
+   </div>
+   
+   </form>
+</div>
+</body>
+</html>

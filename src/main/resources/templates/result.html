@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Result</title>
+</head>
+<body>
+<h1>Calculation Result</h1>
+<div>
+ <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+<p><strong>Result:</strong> <span th:text="${result}"></span></p>
+<p><strong>Operation:</strong> <span th:text="${operation}"></span></p>
+
+<form action="/calculate" method="POST">
+<label for="num1">Enter Number 1:</label>
+<input type="number" id="num1" name="num1" value="${num1}" required>
+
+<label for="num2">Enter Number 2:</label>
+<input type="number" id="num2" name="num2" value="${num2}" required>
+<div>
+<button type="submit" name="operation" value="add">Add</button>
+<button type="submit" name="operation" value="sub">Subtract</button>
+<button type="submit" name="operation" value="mul">Multiply</button>
+<button type="submit" name="operation" value="div">Divide</button>
+</div>
+
+</form>
+</div>
+</body>
+</html>
